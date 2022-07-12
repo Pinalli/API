@@ -28,7 +28,7 @@ function getUser(id) {
         })
         .catch(error => console.log(error))
 }
-
+//POST
 function addUser(newUser) {
     fetch(url, {
         method: "POST",
@@ -43,8 +43,6 @@ function addUser(newUser) {
 
         )
 }
-
-
 //PUT
 function updateUser(updatedUser, id) {
     fetch(`${url}/${id}`, {
@@ -58,11 +56,23 @@ function updateUser(updatedUser, id) {
         .then(data => alertAPI.textContent = data)
         .catch(error => console.log(error))
 }
+//DELETE
+function deleteUser(id) {
+    fetch(`${url}/${id}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json; charset=UTF-8"
+        }
+    })
+        .then(response => (response.json()))
+        .then(data => alertAPI.textContent = data)
+        .catch(error => console.log(error))
+}
 
 
 
-
-addUser(newUser);
+//addUser(newUser);
 getUsers();
-getUser(6);
-updateUser(updatedUser, 6);
+//getUser(6);
+deleteUser(29);
+//updateUser(updatedUser, 6);
