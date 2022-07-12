@@ -8,6 +8,7 @@
   "author": "Alberto Rocha Pinalli",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.27.2",
     "express": "^4.18.1"
   }
 }
