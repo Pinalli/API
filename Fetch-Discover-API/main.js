@@ -74,5 +74,5 @@ function deleteUser(id) {
 //addUser(newUser);
 getUsers();
 //getUser(6);
-deleteUser(29);
+deleteUser(30);
 //updateUser(updatedUser, 6);
