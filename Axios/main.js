@@ -36,8 +36,22 @@ function getUser(id) {
         })
         .catch(error => console.error(error));
 }
+//PUT = atualiza/altera um usuário específico
+function updatedUser(id, userUpdated) {
+    axios.put(`${url}/${id}`, userUpdated)
+        .then(response => {
+            console.log(response);
+        })
+        .catch(error => console.error(error));
+}
+const userUpdated = {
+    name: "Casemiro de Abreu",
+    avatar: "http://picsum.com.br/200/300",
+    city: "Cruz Alta"
+}
 
 getUsers();
 getUser(2);
+updatedUser(4, userUpdated);
 //addNewUser(newUser);
 
