@@ -44,6 +44,15 @@ function updatedUser(id, userUpdated) {
         })
         .catch(error => console.error(error));
 }
+//DELETE = deleta um usuário específico
+function deleteUser(id) {
+    axios.delete(`${url}/${id}`)
+        .then(response => {
+            console.log(response);
+        })
+        .catch(error => console.error(error));
+
+}
 const userUpdated = {
     name: "Casemiro de Abreu",
     avatar: "http://picsum.com.br/200/300",
@@ -52,6 +61,7 @@ const userUpdated = {
 
 getUsers();
 getUser(2);
-updatedUser(4, userUpdated);
+//updatedUser(4, userUpdated);
+deleteUser(5);
 //addNewUser(newUser);
 
